@@ -1,0 +1,23 @@
+{
+  "name": "nietzsche",
+  "version": "1.0.0",
+  "description": "Cloing Airbnb with py,dj,tw and more",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mgm11063/nietzsche.git"
+  },
+  "scripts": {
+    "css": "gulp"
+  },
+  "homepage": "https://github.com/mgm11063/nietzsche#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.3.6",
+    "gulp": "^4.0.2",
+    "gulp-csso": "^4.0.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.0.0",
+    "node-sass": "^6.0.1",
+    "sass": "^1.42.1",
+    "tailwindcss": "^2.2.16"
+  }
+}

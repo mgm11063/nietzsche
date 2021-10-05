@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block page_title %}
+    {{room.name}}
+{% endblock page_title %}
+
+{% block content %}
+    <div>
+        <h1>{{room.name}}</h1>
+        <h3>{{room.description}}</h3>
+    </div>
+    <div> 
+        <h2>
+            <a href="{{room.host.get_absolute_url}}">{{room.host.username}}님의 방</a>
+            {% if room.host.superhost %}
+                 / 슈퍼호스트 인증뱃지
+            {% endif %}        
+        </h2>
+        <h3>Amenities</h3>
+            <ul>
+                {% for a in room.amenities.all  %}
+                    <li>{{a}}</li>
+                {% endfor %}
+            </ul>
+        <h3>Facilities</h3>
+            <ul>
+                {% for a in room.facilities.all  %}
+                    <li>{{a}}</li>
+                {% endfor %}
+                </ul>
+        <h3>House Rules</h3>
+            <ul>
+                {% for a in room.house_rules.all  %}
+                    <li>{{a}}</li>
+                {% endfor %}
+            </ul>
+    </div>
+{% endblock content %}

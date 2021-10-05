@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block page_title %}
+    검색
+{% endblock page_title %}
+
+{% block search_bar %}
+
+    <form method="get" action="{%url "rooms:search"%}">
+    {{form.as_p}}
+        <button>검색</button>
+    </form>
+
+    <h3>결과</h3>
+    {% for room in rooms %}
+        <h3>{{room.name}}</h3>
+    {% endfor %}
+
+{% endblock search_bar %}
+
+
+{% block content %}
+    <h2>자! 를! 검색 할꺼에요</h2>
+ 
+    <h4>{{city}}에 관한  검색 결과입니다</h4>
+    <span>{{city}}</span>
+{% endblock content %}
+
