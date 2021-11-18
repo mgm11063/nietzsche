@@ -10,16 +10,28 @@
 # `Pipfile.lock` and then regenerate `requirements*.txt`.
 ################################################################################
 
-appdirs==1.4.3
-attrs==19.3.0
-black==19.10b0
-click==7.0
-entrypoints==0.3
-flake8==3.7.9
+astroid==2.6.6 ; python_version ~= '3.6'
+awsebcli==3.2.2
+black==21.11b1
+cement==2.4.0
+click==8.0.3 ; python_version >= '3.6'
+flake8==4.0.1
+isort==5.10.1 ; python_version < '4.0' and python_full_version >= '3.6.1'
+jmespath==0.10.0 ; python_version >= '2.6' and python_version not in '3.0, 3.1, 3.2, 3.3'
+lazy-object-proxy==1.6.0 ; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4, 3.5'
 mccabe==0.6.1
-pathspec==0.6.0
-pycodestyle==2.5.0
-pyflakes==2.1.1
-regex==2019.8.19
-toml==0.10.0
-typed-ast==1.4.0
+mypy-extensions==0.4.3
+pathspec==0.9.0
+platformdirs==2.4.0 ; python_version >= '3.6'
+pycodestyle==2.8.0 ; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4'
+pyflakes==2.4.0 ; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3'
+pylint==3.0.0a4
+python-dateutil==2.8.2 ; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3'
+pyyaml==6.0 ; python_version >= '3.6'
+regex==2021.11.10
+setuptools==59.1.1 ; python_version >= '3.6'
+six==1.16.0 ; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3'
+toml==0.10.2 ; python_version >= '2.6' and python_version not in '3.0, 3.1, 3.2, 3.3'
+tomli==1.2.2 ; python_version >= '3.6'
+typing-extensions==4.0.0 ; python_version >= '3.6'
+wrapt==1.12.1
