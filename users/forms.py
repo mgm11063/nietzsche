@@ -1,5 +1,6 @@
 from django import contrib, forms
 from django.contrib.auth import password_validation
+from django.contrib.auth.forms import PasswordChangeForm
 from . import models
 
 
@@ -75,3 +76,31 @@ class SignUpForm(forms.ModelForm):
                 password_validation.validate_password(password, self.instance)
             except forms.ValidationError as error:
                 self.add_error("password1", error)
+
+
+class UpdatePasswordForm(PasswordChangeForm):
+
+    """Update Passord Form Definition"""
+
+    old_password = forms.CharField(
+        required=True,
+        widget=forms.PasswordInput(
+            attrs={"placeholder": "Current Password", "class": "form-btn rounded-t-lg"}
+        ),
+    )
+
+    new_password1 = forms.CharField(
+        required=True,
+        widget=forms.PasswordInput(
+            attrs={"placeholder": "New Password", "class": "form-btn"}
+        ),
+    )
+    new_password2 = forms.CharField(
+        required=True,
+        widget=forms.PasswordInput(
+            attrs={
+                "placeholder": "Confrim New Password",
+                "class": "form-btn rounded-b-lg",
+            }
+        ),
+    )
